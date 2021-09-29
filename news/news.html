@@ -1,50 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>News new title</title>
-<link rel="stylesheet" href="../css/styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<style>
-
-</style>
-
-<script>
-
-  class Novedad {
-    constructor(id, description, time, category) {
-      this.id = id;
-      this.description = description;
-      this.time = time;
-      this.category = category;
-    }
-  }
-
-  var novedades = [];
-  novedades.push(new Novedad(1, "Se casó la hija de tinelli", "9/9 10 HS", "Espectaculo"));
-  novedades.push(new Novedad(2, "Susana jimenes arranca su programa en 2 dias", "9/9 10 HS", "Espectaculo"));
-  novedades.push(new Novedad(3, "Lo que sea ejemplo de novedad", "9/9 10 HS", "Noticias"));
-  novedades.push(new Novedad(4, "Tinelli se compró un auto nuevo", "9/9 10 HS", "Espectaculo"));
-
-  function enviandoFormulario() {
-    document.getElementById('result').innerHTML = '';
-    var value = document.getElementById('input-search').value.toLocaleUpperCase();
-    
-    var result = "<ul>";
-    
-    novedades.forEach(novedad => {
-      if(novedad.description.toLocaleUpperCase().includes(value)) {
-        var li = "<li>" + novedad.id + " - " + novedad.description + " - " + novedad.time + " - " + novedad.category + "</li>";
-        result += li;
-      }
-    });
-
-    result += "</ul>";
-    
-    document.getElementById('result').insertAdjacentHTML("beforeend", result);
-  }
-
-</script>
+<head> 
+  <title>News new title</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="js/news.js"></script>
 </head>
 
 <body>
